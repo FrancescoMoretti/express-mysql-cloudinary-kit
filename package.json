@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FrancescoMoretti/express-mysql-cloudinary-kit/issues"
   },
-  "homepage": "https://github.com/FrancescoMoretti/express-mysql-cloudinary-kit#readme"
+  "homepage": "https://github.com/FrancescoMoretti/express-mysql-cloudinary-kit#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3"
+  }
 }
