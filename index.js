@@ -3,5 +3,6 @@ module.exports={
     ...require('./src/utils/hash'),
     ...require('./src/utils/dbKeepAlive'),
     ...require('./client/utils'),
-    ...require('./src/config/db')
+    ...require('./src/config/db'),
+    ...require('./src/config/cloudinary')
 };
