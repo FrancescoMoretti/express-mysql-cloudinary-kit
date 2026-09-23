@@ -2,5 +2,6 @@ module.exports={
     ...require('./src/utils/validazione'),
     ...require('./src/utils/hash'),
     ...require('./src/utils/dbKeepAlive'),
-    ...require('./client/utils')
+    ...require('./client/utils'),
+    ...require('./src/config/db')
 };
