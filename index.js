@@ -5,5 +5,6 @@ module.exports={
     ...require('./client/utils'),
     ...require('./src/config/db'),
     ...require('./src/config/cloudinary'),
-    ...require('./src/middleware/images')
+    ...require('./src/middleware/images'),
+    ...require('./src/middleware/rateLimiter')
 };
