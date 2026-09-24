@@ -4,5 +4,6 @@ module.exports={
     ...require('./src/utils/dbKeepAlive'),
     ...require('./client/utils'),
     ...require('./src/config/db'),
-    ...require('./src/config/cloudinary')
+    ...require('./src/config/cloudinary'),
+    ...require('./src/middleware/images')
 };
