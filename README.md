@@ -11,19 +11,22 @@ npm install github:FrancescoMoretti/express-mysql-cloudinary-kit
 ## Moduli
 
 **Database**
-- `createPool(config)` — crea un pool `mysql2/promise` con SSL, a partire da host/porta/utente/password/database/certificato
+- `createPool(config)` — crea un pool `mysql2/promise` con SSL, a partire da host/porta/utente/password/database/certificato (con default per `waitForConnections`/`connectionLimit`/`queueLimit`)
 - `keepAlive(pool)` — ping periodico (ogni 12h) per evitare il timeout della connessione
 
 **Cloudinary**
 - `createCloudinary(config)` — configura il client Cloudinary e restituisce `{cloudinary, upload, uploadToCloudinary}`: `upload` è il middleware multer pronto (whitelist MIME, limiti di dimensione/numero file), `uploadToCloudinary` carica un buffer e restituisce `{imageUrl, publicId}`
 - `gestioneErroriUpload` — middleware Express per intercettare e tradurre in JSON gli errori di multer
 
-**Autenticazione e sicurezza**
-- `hashPassword(password)` — hashing con bcrypt
+**Setup app**
+- `errorHandler` — error-handling middleware generico (500)
+- `createNotFoundHandler(publicDir)` — middleware 404
+- `createFaviconHandler(faviconPath)` — handler per `/favicon.ico`
 - `createLoginLimiter(opzioni)` / `createPublicLimiter(opzioni)` — rate limiter pronti per login e per endpoint pubblici
 
-**Validazione**
+**Validazione e sicurezza**
 - `validaStringa`, `validaUrl`, `validaUrlSocial`, `validaPassword`
+- `hashPassword(password)` — hashing con bcrypt
 
 **Frontend condiviso** (serviti come asset statici da `client/`)
 - `escapeHTML` — sanitizzazione HTML, utilizzabile sia lato server (richiesta) sia lato browser (script incluso in pagina)
