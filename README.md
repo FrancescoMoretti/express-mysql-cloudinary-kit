@@ -24,9 +24,14 @@ npm install github:FrancescoMoretti/express-mysql-cloudinary-kit
 - `createFaviconHandler(faviconPath)` — handler per `/favicon.ico`
 - `createLoginLimiter(opzioni)` / `createPublicLimiter(opzioni)` — rate limiter pronti per login e per endpoint pubblici
 
-**Validazione e sicurezza**
-- `validaStringa`, `validaUrl`, `validaUrlSocial`, `validaPassword`
+**Sicurezza**
 - `hashPassword(password)` — hashing con bcrypt
+
+**Validazione**
+- `validaStringa`, `validaUrl`, `validaUrlSocial`, `validaPassword`
+
+**Utility**
+- `filtro` — prepara clausola where e parametri per filtrare liste di contenuti con più campi
 
 **Frontend condiviso** (serviti come asset statici da `client/`)
 - `escapeHTML` — sanitizzazione HTML, utilizzabile sia lato server (richiesta) sia lato browser (script incluso in pagina)
