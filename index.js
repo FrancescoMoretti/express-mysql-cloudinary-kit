@@ -7,5 +7,7 @@ module.exports={
     ...require('./src/config/cloudinary'),
     ...require('./src/middleware/images'),
     ...require('./src/middleware/rateLimiter'),
-    ...require('./src/middleware/errorHandler')
+    ...require('./src/middleware/errorHandler'),
+    ...require('./src/middleware/notFound'),
+    ...require('./src/handlers/favicon')
 };
