@@ -4,7 +4,9 @@ Libreria di moduli backend condivisi per applicazioni Node.js/Express con databa
 
 ## Installazione
 
+```bash
 npm install github:FrancescoMoretti/express-mysql-cloudinary-kit
+```
 
 ## Moduli
 
@@ -31,18 +33,22 @@ npm install github:FrancescoMoretti/express-mysql-cloudinary-kit
 
 Nel progetto che la installa:
 
+```javascript
 const {createPool, createCloudinary, validaStringa} = require('express-mysql-cloudinary-kit');
 
 const pool = createPool({
     host: process.env.DB_HOST,
     // ...
 });
+```
 
 Per gli script frontend (`escapeHTML`, `slider.js`), il progetto ospitante deve servirli come file statici, ad esempio:
 
+```javascript
 app.use('/lib', express.static(
     path.join(path.dirname(require.resolve('express-mysql-cloudinary-kit/package.json')), 'client')
 ));
+```
 
 ## Licenza
 
