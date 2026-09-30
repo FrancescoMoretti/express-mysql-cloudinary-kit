@@ -1,7 +1,7 @@
 const cloudinary=require('cloudinary').v2;
 const multer=require('multer');
 
-function createCloudinary({cloudName, apiKey, apiSecret, folderPrefix, allowedMimeTypes=['image/jpeg','image/png','image/webp'], maxFileSize=5*1024*1024, maxFiles=5}){
+function createCloudinary({cloudName, apiKey, apiSecret, folderPrefix="Home", allowedMimeTypes=['image/jpeg','image/png','image/webp'], maxFileSize=5*1024*1024, maxFiles=5}){
     cloudinary.config({
         cloud_name: cloudName,
         api_key: apiKey,
